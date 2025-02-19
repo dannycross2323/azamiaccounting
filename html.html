@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AzAccount</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Page Title -->
+    <div class="page-title">
+      <h1>Azami's Accounting</h1>
+    </div>
+
+    <!-- Header with Global Settings -->
+    <div class="header">
+      <div class="settings">
+        <label for="global-name">Name:</label>
+        <input type="text" id="global-name" placeholder="Enter your name">
+      </div>
+      <div class="settings">
+        <label for="global-receiver">Receiver:</label>
+        <input type="text" id="global-receiver" placeholder="Enter receiver name">
+      </div>
+      <div class="settings">
+        <label for="global-main-money">Main Money:</label>
+        <input type="number" id="global-main-money" placeholder="Enter main money">
+      </div>
+      <div class="settings">
+        <label for="new-amount">New Amount:</label>
+        <input type="number" id="new-amount" placeholder="Enter amount">
+      </div>
+      <div class="settings btn-group">
+        <button id="update-global-btn" class="header-btn">Update Global Info</button>
+        <button id="submit-record" class="header-btn">Submit Record</button>
+        <button id="cancel-all" class="header-btn">Cancel All</button>
+      </div>
+    </div>
+
+    <!-- Records Table -->
+    <h2>Records:</h2>
+    <table id="records-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Receiver</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="records-body">
+        <!-- Records will be inserted here -->
+      </tbody>
+    </table>
+
+    <!-- Footer for Global Money Info -->
+    <div id="footer">
+      <p>
+        Main Money: <span id="main-money-display">0</span> AFG | 
+        Consumed: <span id="consumed-amount" style="font-weight:bold;">0</span> AFG | 
+        Remaining: <span id="remaining-money" style="font-weight:bold;">0</span> AFG
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal for Update Confirmation -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message">You're about to update. Are you sure?</p>
+      <div class="modal-btn-group">
+        <button id="modal-yes" class="modal-btn">Yes</button>
+        <button id="modal-no" class="modal-btn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
